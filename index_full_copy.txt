@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کوچ یاسر جعفریان | باشگاه هرکولس</title>
+<meta name="description" content="برنامه تمرینی و تغذیه اختصاصی از کوچ یاسر جعفریان — حجمی، چربی‌سوزی و VIP. ثبت‌نام از طریق تلگرام.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d0f; --bg2:#141417; --card:#1a1a1f; --border:#2a2a31;
+  --gold:#d4af37; --gold2:#f2d06b; --red:#e53935; --red2:#ff5252;
+  --text:#f5f2ea; --muted:#9a97a0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.sec-title{text-align:center;font-size:2rem;font-weight:900;margin-bottom:12px}
+.sec-title span{color:var(--gold)}
+.sec-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 48px}
+.btn{display:inline-block;padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;transition:.25s;cursor:pointer;border:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(212,175,55,.35)}
+.btn-tg{background:linear-gradient(135deg,#229ED9,#2ea6e8);color:#fff}
+.btn-tg:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(34,158,217,.4)}
+.btn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff}
+.btn-red:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(229,57,53,.35)}
+
+/* header */
+header{position:fixed;top:0;right:0;left:0;z-index:100;background:rgba(13,13,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.25rem}
+.logo .shield{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#111}
+.logo b{color:var(--gold)}
+.nav-links{display:flex;gap:26px;font-size:.95rem}
+.nav-links a:hover{color:var(--gold)}
+.nav .btn{padding:9px 20px;font-size:.9rem}
+#menuBtn{display:none;background:none;border:1px solid var(--border);color:var(--gold);font-size:1.4rem;border-radius:8px;padding:4px 12px;cursor:pointer}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:
+ radial-gradient(circle at 80% 20%,rgba(212,175,55,.12),transparent 45%),
+ radial-gradient(circle at 15% 80%,rgba(229,57,53,.12),transparent 45%),var(--bg);
+ padding-top:70px}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:rgba(212,175,55,.12);color:var(--gold);border:1px solid rgba(212,175,55,.4);padding:6px 18px;border-radius:50px;font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:3rem;font-weight:900;line-height:1.4}
+.hero h1 span{color:var(--gold)}
+.hero p{color:var(--muted);margin:18px 0 30px;font-size:1.05rem;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.hero-card .big{font-size:3.4rem}
+.hero-stats{display:flex;justify-content:space-around;margin-top:26px;flex-wrap:wrap;gap:10px}
+.hero-stats div b{display:block;color:var(--gold);font-size:1.4rem}
+.hero-stats div span{font-size:.8rem;color:var(--muted)}
+
+/* about */
+.about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:50px;align-items:center}
+.about-visual{background:linear-gradient(135deg,#1c1c22,#121215);border:1px solid var(--border);border-radius:24px;height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.about-visual .em{font-size:4.5rem}
+.about-visual b{color:var(--gold);font-size:1.4rem}
+.about p{color:var(--muted);margin-bottom:16px}
+.about ul{list-style:none;margin:18px 0 28px}
+.about li{padding:8px 0;padding-right:28px;position:relative;color:var(--text)}
+.about li::before{content:"✔";position:absolute;right:0;color:var(--gold);font-weight:900}
+
+/* plans */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.plan{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:34px 26px;text-align:center;position:relative;transition:.25s}
+.plan:hover{transform:translateY(-6px);border-color:var(--gold)}
+.plan h3{font-size:1.35rem;margin-bottom:8px}
+.plan .desc{color:var(--muted);font-size:.88rem;min-height:56px}
+.price{font-size:1.6rem;font-weight:900;color:var(--gold);margin:16px 0 4px}
+.price small{font-size:.8rem;color:var(--muted);font-weight:400}
+.plan ul{list-style:none;margin:18px 0 24px;text-align:right}
+.plan li{padding:7px 0;padding-right:26px;position:relative;font-size:.92rem;color:var(--text)}
+.plan li::before{content:"✓";position:absolute;right:0;color:var(--gold);font-weight:900}
+.plan .btn{width:100%}
+.plan.featured{border:2px solid var(--gold);box-shadow:0 0 40px rgba(212,175,55,.15)}
+.plan .tag{position:absolute;top:-14px;right:24px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;font-size:.75rem;font-weight:900;padding:4px 16px;border-radius:50px}
+
+/* blog */
+.blog{background:var(--bg2)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.post{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:.25s;display:block}
+.post:hover{transform:translateY(-6px);border-color:var(--gold)}
+.post .thumb{height:150px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#22222a,#151518)}
+.post .body{padding:22px}
+.post h3{font-size:1.05rem;margin-bottom:8px}
+.post p{color:var(--muted);font-size:.85rem}
+.post .more{color:var(--gold);font-size:.85rem;font-weight:700}
+
+/* bmi */
+.bmi-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.bmi-box{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:34px}
+.bmi-box label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.bmi-box input,.bmi-box select{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:1rem;margin-bottom:16px}
+.bmi-box input:focus,.bmi-box select:focus{outline:none;border-color:var(--gold)}
+.bmi-result{text-align:center;margin-top:10px}
+.bmi-value{font-size:3rem;font-weight:900;color:var(--gold)}
+.bmi-status{font-size:1.05rem;font-weight:700;margin-top:4px}
+.bmi-bar{height:10px;border-radius:10px;background:linear-gradient(90deg,#4fc3f7,#66bb6a,#ffd54f,#ef5350);margin-top:18px;position:relative}
+.bmi-bar .dot{position:absolute;top:-6px;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid #111;transform:translateX(50%);transition:.4s;display:none}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.form-card,.tg-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:34px}
+.form-card label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.form-card input,.form-card select,.form-card textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:1rem;margin-bottom:16px}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:var(--gold)}
+.tg-card{text-align:center;border-color:rgba(34,158,217,.5)}
+.tg-card .tg-icon{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#229ED9,#2ea6e8);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem;color:#fff}
+.tg-card p{color:var(--muted);font-size:.9rem;margin:10px 0 22px}
+.form-note{background:rgba(212,175,55,.1);border:1px dashed rgba(212,175,55,.5);color:var(--gold2);font-size:.82rem;border-radius:12px;padding:10px 14px;margin-bottom:18px}
+
+/* floating telegram */
+.float-tg{position:fixed;bottom:22px;left:22px;z-index:200;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#229ED9,#2ea6e8);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:#fff;box-shadow:0 8px 24px rgba(34,158,217,.45);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,158,217,.5)}70%{box-shadow:0 0 0 18px rgba(34,158,217,0)}100%{box-shadow:0 0 0 0 rgba(34,158,217,0)}}
+
+footer{background:#0a0a0c;border-top:1px solid var(--border);padding:50px 0 24px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:30px}
+footer h4{color:var(--gold);margin-bottom:14px;font-size:1.05rem}
+footer p,footer a{color:var(--muted);font-size:.9rem}
+footer a:hover{color:var(--gold)}
+.copyright{text-align:center;color:#666;font-size:.8rem;padding-top:20px;border-top:1px solid var(--border)}
+
+@media(max-width:900px){
+  .hero-grid,.about-grid,.bmi-grid,.contact-grid,.foot-grid{grid-template-columns:1fr}
+  .plans-grid,.blog-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.1rem}
+  section{padding:60px 0}
+  .nav-links{position:fixed;top:70px;right:0;left:0;background:var(--bg2);flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--border);display:none}
+  .nav-links.open{display:flex}
+  .nav-links .btn{width:100%;text-align:center}
+  #menuBtn{display:block}
+  .nav .btn-gold{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo"><span class="shield">💪</span><span>باشگاه <b>هرکولس</b></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">درباره کوچ</a>
+      <a href="#plans">برنامه‌ها و تعرفه‌ها</a>
+      <a href="#bmi">محاسبه BMI</a>
+      <a href="#blog">مقالات</a>
+      <a href="#contact">ثبت‌نام</a>
+      <a class="btn btn-tg tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">تماس از طریق تلگرام</a>
+    </nav>
+    <a class="btn btn-gold tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">ثبت‌نام تلگرام</a>
+    <button id="menuBtn" aria-label="منو">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">🔥 مربی رسمی بدنسازی و تناسب اندام</span>
+      <h1>مسیر <span>قوی‌ترین</span> نسخهٔ خودت را با <span>یاسر جعفریان</span> شروع کن</h1>
+      <p>برنامه تمرینی و تغذیه کاملاً اختصاصی، همراهی مستمر و پشتیبانی واقعی از طریق تلگرام. بدون شعار؛ فقط نتیجه.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">تماس از طریق تلگرام</a>
+        <a class="btn btn-red" href="#plans">مشاهده برنامه‌ها</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">🏋️</div>
+      <div class="hero-stats">
+        <div><b>+۱۰۰۰</b><span>ورزشکار همراه</span></div>
+        <div><b>+۷</b><span>سال سابقه</span></div>
+        <div><b>۳</b><span>پکیج تخصصی</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <span class="em">🦁</span>
+      <b>یاسر جعفریان</b>
+      <span style="color:var(--muted);font-size:.85rem">کوچ بدنسازی و تناسب اندام</span>
+    </div>
+    <div>
+      <h2 class="sec-title" style="text-align:right">دربارهٔ کوچ <span>یاسر جعفریان</span></h2>
+      <p>سلام! من <strong>یاسر جعفریان</strong> هستم؛ مربی بدنسازی و تناسب اندام و بنیان‌گذار برند باشگاه <strong>هرکولس</strong>. سال‌هاست با برنامه‌نویسی علمی تمرین و تغذیه، همراه ورزشکاران از مبتدی تا حرفه‌ای هستم.</p>
+      <ul>
+        <li>برنامه تمرینی کاملاً اختصاصی بر اساس شرایط بدنی و هدف شما</li>
+        <li>برنامه غذایی متناسب با سبک زندگی و امکانات شما</li>
+        <li>پشتیبانی و آنالیز مستمر پیشرفت از طریق تلگرام</li>
+        <li>اصلاح فرم حرکات با ویدیوهای ارسالی شما</li>
+      </ul>
+      <a class="btn btn-gold tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">تماس از طریق تلگرام</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="container">
+    <h2 class="sec-title">برنامه‌های <span>تمرینی</span></h2>
+    <p class="sec-sub">هر سه پکیج شامل برنامه تمرینی اختصاصی، برنامه غذایی و پشتیبانی تلگرام است. برای شروع، مستقیم در تلگرام پیام بدهید.</p>
+    <div class="plans-grid">
+      <div class="plan">
+        <h3>حجمی</h3>
+        <p class="desc">افزایش حجم عضلانی و قدرت با تمرین و تغذیه اصولی.</p>
+        <div class="price">۱٬۸۰۰٬۰۰۰ تومان <small>/ ماه</small></div>
+        <ul>
+          <li>برنامه تمرینی حجمی اختصاصی</li>
+          <li>برنامه غذایی مخصوص حجم</li>
+          <li>پشتیبانی تلگرام</li>
+          <li>بازبینی ماهانه پیشرفت</li>
+        </ul>
+        <a class="btn btn-tg plan-btn" data-plan="حجمی" href="https://t.me/yaserjafarian?text=%D8%B3%D9%84%D8%A7%D9%85%20%DA%A9%D9%88%DA%86%20%DB%8C%D8%A7%D8%B3%D8%B1%20%D8%AC%D8%B9%D9%81%D8%B1%DB%8C%D8%A7%D9%86%20%F0%9F%91%8B%20%D9%85%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D9%87%D9%85%20%D8%AF%D8%B1%20%D9%BE%DA%A9%DB%8C%D8%AC%20%C2%AB%D8%AD%D8%AC%D9%85%DB%8C%C2%BB%20%D8%AB%D8%A8%D8%AA%E2%80%8C%D9%86%D8%A7%D9%85%20%DA%A9%D9%86%D9%85.%20%D9%84%D8%B7%D9%81%D8%A7%D9%8B%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF." target="_blank" rel="noopener">✈️ ثبت‌نام و سفارش در تلگرام</a>
+        <a class="btn btn-red" href="#register" style="margin-top:10px">انتخاب پکیج و ثبت فرم</a>
+      </div>
+      <div class="plan">
+        <h3>چربی‌سوزی</h3>
+        <p class="desc">کاهش چربی و فرم‌دهی بدن با کاردیو کنترل‌شده و رژیم علمی.</p>
+        <div class="price">۲٬۵۰۰٬۰۰۰ تومان <small>/ ماه</small></div>
+        <ul>
+          <li>برنامه تمرینی چربی‌سوزی اختصاصی</li>
+          <li>رژیم غذایی کاهش چربی</li>
+          <li>پشتیبانی تلگرام</li>
+          <li>تنظیم هفتگی کالری</li>
+        </ul>
+        <a class="btn btn-tg plan-btn" data-plan="چربی‌سوزی" href="https://t.me/yaserjafarian?text=%D8%B3%D9%84%D8%A7%D9%85%20%DA%A9%D9%88%DA%86%20%DB%8C%D8%A7%D8%B3%D8%B1%20%D8%AC%D8%B9%D9%81%D8%B1%DB%8C%D8%A7%D9%86%20%F0%9F%91%8B%20%D9%85%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D9%87%D9%85%20%D8%AF%D8%B1%20%D9%BE%DA%A9%DB%8C%D8%AC%20%C2%AB%DA%86%D8%B1%D8%A8%DB%8C%E2%80%8C%D8%B3%D9%88%D8%B2%DB%8C%C2%BB%20%D8%AB%D8%A8%D8%AA%E2%80%8C%D9%86%D8%A7%D9%85%20%DA%A9%D9%86%D9%85.%20%D9%84%D8%B7%D9%81%D8%A7%D9%8B%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF." target="_blank" rel="noopener">✈️ ثبت‌نام و سفارش در تلگرام</a>
+        <a class="btn btn-red" href="#register" style="margin-top:10px">انتخاب پکیج و ثبت فرم</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">پیشنهاد ویژه</span>
+        <h3>VIP</h3>
+        <p class="desc">همراهی کامل و روزانه؛ حداکثر نتیجه در حداقل زمان.</p>
+        <div class="price">۵٬۹۰۰٬۰۰۰ تومان <small>/ ماه</small></div>
+        <ul>
+          <li>تمام امکانات پکیج‌های قبلی</li>
+          <li>پشتیبانی روزانه تلگرام</li>
+          <li>آنالیز ویدیویی فرم حرکات</li>
+          <li>تنظیم هفتگی کامل تمرین و تغذیه</li>
+        </ul>
+        <a class="btn btn-gold plan-btn" data-plan="VIP" href="https://t.me/yaserjafarian?text=%D8%B3%D9%84%D8%A7%D9%85%20%DA%A9%D9%88%DA%86%20%DB%8C%D8%A7%D8%B3%D8%B1%20%D8%AC%D8%B9%D9%81%D8%B1%DB%8C%D8%A7%D9%86%20%F0%9F%91%8B%20%D9%85%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D9%87%D9%85%20%D8%AF%D8%B1%20%D9%BE%DA%A9%DB%8C%D8%AC%20%C2%ABVIP%C2%BB%20%D8%AB%D8%A8%D8%AA%E2%80%8C%D9%86%D8%A7%D9%85%20%DA%A9%D9%86%D9%85.%20%D9%84%D8%B7%D9%81%D8%A7%D9%8B%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF." target="_blank" rel="noopener">✈️ ثبت‌نام و سفارش در تلگرام</a>
+        <a class="btn btn-red" href="#register" style="margin-top:10px">انتخاب پکیج و ثبت فرم</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BMI -->
+<section id="bmi" class="about">
+  <div class="container">
+    <h2 class="sec-title">محاسبهٔ <span>BMI</span></h2>
+    <p class="sec-sub">شاخص توده بدنی خود را رایگان محاسبه کنید.</p>
+    <div class="bmi-grid">
+      <div class="bmi-box">
+        <label for="h">قد (سانتی‌متر)</label>
+        <input type="number" id="h" placeholder="مثلاً ۱۷۵" min="80" max="250">
+        <label for="w">وزن (کیلوگرم)</label>
+        <input type="number" id="w" placeholder="مثلاً ۷۸" min="25" max="300">
+        <button class="btn btn-gold" style="width:100%" onclick="calcBMI()">محاسبه کن</button>
+        <div class="bmi-result" id="bmiResult" style="display:none">
+          <div class="bmi-value" id="bmiValue"></div>
+          <div class="bmi-status" id="bmiStatus"></div>
+          <div class="bmi-bar"><span class="dot" id="bmiDot"></span></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.3rem;margin-bottom:14px">عدد شما چه می‌گوید؟</h3>
+        <p style="color:var(--muted)">BMI فقط یک شاخص کلی است و ترکیب بدنی، سن و سطح فعالیت را در نظر نمی‌گیرد. اگر می‌خواهید برنامه دقیق و اختصاصی دریافت کنید، از طریق تلگرام برای <strong>یاسر جعفریان</strong> پیام بفرستید تا آنالیز کامل انجام شود.</p>
+        <a class="btn btn-tg tg-link" style="margin-top:22px" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">تماس از طریق تلگرام</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="blog">
+  <div class="container">
+    <h2 class="sec-title">مقالات <span>آموزشی</span></h2>
+    <p class="sec-sub">نکات کاربردی تمرین و تغذیه.</p>
+    <div class="blog-grid">
+      <a class="post tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">
+        <div class="thumb">🥗</div>
+        <div class="body"><h3>۱۰ اشتباه رایج در رژیم حجم</h3><p>بیشترِ مبتدی‌ها کالری و پروتئین را اشتباه محاسبه می‌کنند؛ این نکات را رعایت کنید.</p><span class="more">ادامه در تلگرام ←</span></div>
+      </a>
+      <a class="post tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">
+        <div class="thumb">🔥</div>
+        <div class="body"><h3>چربی‌سوزی واقعی، بدون گرسنگی</h3><p>کسری کالری هوشمندانه و حفظ عضلات در دورهٔ کات؛ راهنمای گام‌به‌گام.</p><span class="more">ادامه در تلگرام ←</span></div>
+      </a>
+      <a class="post tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">
+        <div class="thumb">🏋️</div>
+        <div class="body"><h3>اصول تمرین برای مبتدی‌ها</h3><p>از انتخاب حرکات پایه تا پیشرفت تدریجی؛ از کجا شروع کنید؟</p><span class="more">ادامه در تلگرام ←</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <span id="register" style="position:relative;top:-90px;display:block"></span>
+  <div class="container">
+    <h2 class="sec-title">ثبت‌نام و <span>تماس</span></h2>
+    <p class="sec-sub">فرم زیر را پر کنید و روی دکمه بزنید؛ پیام آمادهٔ شما در تلگرام باز می‌شود تا آن را برای <strong>یاسر جعفریان</strong> ارسال کنید. (هیچ پیامی به‌صورت خودکار ارسال نمی‌شود)</p>
+    <div class="contact-grid">
+      <div class="form-card">
+        <div class="form-note">⚠️ این فرم پیام را خودکار ارسال نمی‌کند؛ متن آماده را در تلگرام می‌بینید و خودتان دکمه ارسال را می‌زنید.</div>
+        <form id="regForm" onsubmit="return sendToTelegram(event)">
+          <label for="fname">نام و نام خانوادگی</label>
+          <input id="fname" required placeholder="مثلاً علی محمدی">
+          <label for="page">پکیج موردنظر</label>
+          <select id="page">
+            <option value="حجمی (۱٬۸۰۰٬۰۰۰ تومان / ماه)">حجمی — ۱٬۸۰۰٬۰۰۰ تومان / ماه</option>
+            <option value="چربی‌سوزی (۲٬۵۰۰٬۰۰۰ تومان / ماه)">چربی‌سوزی — ۲٬۵۰۰٬۰۰۰ تومان / ماه</option>
+            <option value="VIP (۵٬۹۰۰٬۰۰۰ تومان / ماه)">VIP — ۵٬۹۰۰٬۰۰۰ تومان / ماه</option>
+          </select>
+          <label for="note">توضیحات (قد، وزن، هدف، سابقه تمرین)</label>
+          <textarea id="note" rows="4" placeholder="مثلاً ۱۷۵ سانتی‌متر، ۸۰ کیلو، هدف: چربی‌سوزی"></textarea>
+          <button type="submit" class="btn btn-tg" style="width:100%">ادامه در تلگرام ➜</button>
+        </form>
+      </div>
+      <div class="tg-card">
+        <div class="tg-icon">✈️</div>
+        <h3>تماس مستقیم</h3>
+        <p> سریع‌ترین راه ارتباط با کوچ <strong>یاسر جعفریان</strong> پیام مستقیم در تلگرام است. رزرو مشاوره، سؤال درباره پکیج‌ها و شروع همکاری همین‌جاست.</p>
+        <a class="btn btn-tg" style="width:100%" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">تماس از طریق تلگرام</a>
+        <a class="btn btn-gold" style="width:100%;margin-bottom:10px" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">ارتباط مستقیم با مربی یاسر جعفریان در تلگرام</a>
+        <p style="margin-top:18px;font-size:.85rem">شناسه تلگرام: <span dir="ltr" style="color:var(--gold)">@yaserjafarian</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><span class="shield">💪</span><span>باشگاه <b>هرکولس</b></span></div>
+        <p>مرکز آموزش و برنامه‌ریزی تخصصی بدنسازی و تناسب اندام زیر نظر کوچ <strong>یاسر جعفریان</strong>.</p>
+      </div>
+      <div>
+        <h4>دسترسی سریع</h4>
+        <p><a href="#about">درباره کوچ</a><br><a href="#plans">برنامه‌ها و تعرفه‌ها</a><br><a href="#bmi">محاسبه BMI</a><br><a href="#blog">مقالات</a></p>
+      </div>
+      <div>
+        <h4>تماس</h4>
+        <p><a class="tg-link" href="https://t.me/yaserjafarian" target="_blank" rel="noopener">✈️ تماس از طریق تلگرام</a><br>
+        <a href="https://t.me/yaserjafarian" target="_blank" rel="noopener" dir="ltr">@yaserjafarian</a></p>
+      </div>
+    </div>
+    <div class="copyright">© تمامی حقوق برای کوچ یاسر جعفریان — باشگاه هرکولس محفوظ است.</div>
+  </div>
+</footer>
+
+<a class="float-tg" href="https://t.me/yaserjafarian" target="_blank" rel="noopener" aria-label="تماس از طریق تلگرام">✈️</a>
+
+<script>
+function fa(n){return Number(n).toLocaleString('fa-IR',{maximumFractionDigits:1});}
+function calcBMI(){
+  var h=parseFloat(document.getElementById('h').value);
+  var w=parseFloat(document.getElementById('w').value);
+  var box=document.getElementById('bmiResult'),dot=document.getElementById('bmiDot');
+  if(!h||!w||h<80||h>250||w<25||w>300){box.style.display='block';document.getElementById('bmiValue').textContent='—';document.getElementById('bmiStatus').textContent='لطفاً قد و وزن معتبر وارد کنید.';dot.style.display='none';return;}
+  var m=h/100,b=w/(m*m);
+  var st,color;
+  if(b<18.5){st='کمبود وزن';color='#4fc3f7';}
+  else if(b<25){st='وزن نرمال و مطلوب';color='#66bb6a';}
+  else if(b<30){st='اضافه وزن';color='#ffd54f';}
+  else{st='چاقی';color='#ef5350';}
+  document.getElementById('bmiValue').textContent=fa(Math.round(b*10)/10);
+  var el=document.getElementById('bmiStatus');el.textContent=st;el.style.color=color;
+  var pct=Math.min(Math.max((b-14)/(40-14)*100,0),100);
+  dot.style.display='block';dot.style.right='calc('+pct+'% - 11px)';
+  box.style.display='block';
+}
+function sendToTelegram(e){
+  e.preventDefault();
+  var name=document.getElementById('fname').value.trim();
+  var plan=document.getElementById('page').value;
+  var note=document.getElementById('note').value.trim();
+  var msg='سلام کوچ یاسر جعفریان 👋\n';
+  msg+='می‌خواهم در پکیج «'+plan+'» ثبت‌نام کنم.\n';
+  msg+='نام: '+name+'\n';
+  if(note) msg+='توضیحات: '+note+'\n';
+  msg+='(ارسال‌شده از وب‌سایت باشگاه هرکولس)';
+  var link='https://t.me/yaserjafarian?text='+encodeURIComponent(msg);
+  var win=window.open(link,'_blank');
+  if(!win){location.href=link;}
+  return false;
+}
+/* smooth scroll for all hash links (with JS fallback) */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(ev){
+    var id=a.getAttribute('href').slice(1);
+    if(!id) return;
+    var t=document.getElementById(id);
+    if(t){ev.preventDefault();t.scrollIntoView({behavior:'smooth'});history.replaceState(null,'','#'+id);}
+  });
+});
+document.getElementById('menuBtn').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('#navLinks a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
+});
+</script>
+</body>
+</html>
